@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Dire 106.1</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #8f4648, #ddbe0d);
+            color: #d41d1d;
+        }
+
+        header {
+            background: rgba(70, 39, 39, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(5, 172, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff6f61;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #0ddf3a;
+        }
+
+        .flag img {
+            height: 40px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #ff6f61;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language Selector */
+        .language-selector {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .language-selector button {
+            margin: 5px;
+            padding: 10px 20px;
+            background: #aeb90f;
+            color: #7a63a5;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .language-selector button:hover {
+            background: #dfec2a;
+        }
+
+        /* Streaming Section */
+        .streaming-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .streaming-section iframe {
+            width: 100%;
+            max-width: 500px;
+            height: 100px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #13159c;
+        }
+
+        /* Market Wall Background */
+        .market-wall {ket+W
+            background-image:  https://www.scmp.com/magazines/post-magazine/travel/article/2135218/chinese-railway-draws-tourists-dire-dawa-ethiopian
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Logo and Ethiopian Flag -->
+    <header>
+        <div class="logo">
+            <span>FM</span> Dire <span>106.1</span>
+        </div>
+        <div class="flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg" alt="Ethiopian Flag">
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#streaming">Live Streaming</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('am')">Amharic</button>
+        <button onclick="changeLanguage('om')">Afaan Oromoo</button>
+        <button onclick="changeLanguage('so')">Af Somali</button>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 data-lang="en">Welcome to FM Dire 106.1</h1>
+        <h1 data-lang="am" style="display: none;">እንኳን ወደ FM Dire 106.1 በደህና መጡ</h1>
+        <h1 data-lang="om" style="display: none;">Baga nagaan FM Dire 106.1 tiif dhufte</h1>
+        <h1 data-lang="so" style="display: none;">Ku soo dhawoow FM Dire 106.1</h1>
+        <p data-lang="en">Your favorite hits, all day, every day!</p>
+        <p data-lang="am" style="display: none;">የሚወዷቸውን ዜማዎች ማለት ይቻላል፣ በየቀኑ!</p>
+        <p data-lang="om" style="display: none;">Sirboota jaalaltuu keessan guyyaa hunda!</p>
+        <p data-lang="so" style="display: none;">Heesta aad jeceshahay, maalin walba!</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 data-lang="en">About Us</h2>
+        <h2 data-lang="am" style="display: none;">ስለ እኛ</h2>
+        <h2 data-lang="om" style="display: none;">Waa'ee Keenya</h2>
+        <h2 data-lang="so" style="display: none;">Ku saabsan Naaga</h2>
+        <p data-lang="en">FM Dire 106.1 is the leading radio station in the region, bringing you the best music, news, and entertainment.</p>
+        <p data-lang="am" style="display: none;">FM Dire 106.1 በክልሉ ውስጥ ከሚገኙ ሮዲዮ ጣቢያዎች መካከል አለቆች ሲሆን፣ የተሻለ ሙዚቃ፣ ዜና እና መዝናኛ ያቀርብልዎታል።</p>
+        <p data-lang="om" style="display: none;">FM Dire 106.1 bakka bu'oota raadiyoo naannoo keessaa guddaadha, muuziqaa, beekumsaa fi qooqa gaarii siif dhiyeessa.</p>
+        <p data-lang="so" style="display: none;">FM Dire 106.1 waa idaacad ugu sarraysa gobolka, oo kuu keenta muusig, warar, iyo madadaalo fiican.</p>
+    </section>
+
+    <!-- Live Audio Streaming Section -->
+    <section id="streaming">
+        <h2 data-lang="en">Live Streaming</h2>
+        <h2 data-lang="am" style="display: none;">ቀጥታ ስርጭት</h2>
+        <h2 data-lang="om" style="display: none;">Sirna Oduu Qajeelaa</h2>
+        <h2 data-lang="so" style="display: none;">Daawashada Toggaanta</h2>
+        <div class="streaming-section">
+            <iframe src="http://your-icecast-server:8000/stream" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Dire Qafir Market Wall Photo -->
+    <div class="market-wall">
+    
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p data-lang="en">&copy; 2025 FM Dire 106.1. All rights reserved.</p>
+        <p data-lang="am" style="display: none;">&copy; 2023 FM Dire 106.1. መብቱ በህግ የተጠበቀ ነው።</p>
+        <p data-lang="om" style="display: none;">&copy; 2023 FM Dire 106.1. Mirga hundi kan isaati.</p>
+        <p data-lang="so" style="display: none;">&copy; 2023 FM Dire 106.1. Xuquuqda oo dhan waa la ilaaliyay.</p>
+    </footer>
+
+    <script>
+        // Language Switching
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
